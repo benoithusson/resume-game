@@ -1,0 +1,315 @@
+/* -------------------------------- GENERAL -------------------------------- */
+
+body {
+  width:100%;
+  height:100%;
+  /* font:normal 75% Arial, Helvetica, sans-serif; */
+  background-color:black;
+  margin:0; /* To have a full screen canvas */
+}
+
+canvas {
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+#big_container {
+  margin:auto;
+  width:600px;
+  height:650px;
+}
+
+#div_container_1, #div_container_2, #div_container_3 {
+  width:500px;
+  height:200px;
+  display:flex;
+  align-items:space-around;
+  justify-content: center;
+}
+
+#div_1, #div_2, #div_3 {
+  background-color:rgba(24, 24, 236, 0.2);
+  width:300px;
+  height:50px;
+  color:white;
+  border:1px solid rgb(255, 255, 255, 0.4);
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  padding:5px;
+  z-index:1;
+}
+
+#div_1:hover, #div_2:hover, #div_3:hover {
+  animation:animation_block_nav 0.1s linear forwards;
+  -webkit-animation:animation_block_nav 0.1s linear forwards;
+}
+
+#bloc_text {
+  display:inline-block;
+  background-color:grey;
+  width:400px;
+  height:80px;
+}
+
+#rules {
+  width:300px;
+  font-size:20px;
+  font-family: 'Cute Font', cursive, 'Helvetica';
+  line-height:1px;
+  text-align:justify;
+  display:none;
+}
+
+#link_play {
+  text-decoration:none;
+  font-size:20px;
+}
+
+
+/* --- To animate the nav block in the middle of the page --- */
+@keyframes animation_block_nav {
+  0% {
+    background-color:rgba(24, 24, 236, 0.2);
+  }
+  20% {
+    background-color:rgba(24, 24, 236, 0.3);
+  }
+  40% {
+    background-color:rgba(24, 24, 236, 0.4);
+  }
+  60% {
+    background-color:rgba(24, 24, 236, 0.5);
+
+  }
+  80% {
+    background-color:rgba(24, 24, 236, 0.6);
+  }
+  100% {
+    background-color:rgba(24, 24, 236, 0.7);
+  }
+}
+
+
+@-webkit-keyframes animation_block_nav {
+  0% {
+    background-color:rgba(24, 24, 236, 0.2);
+  }
+  20% {
+    background-color:rgba(24, 24, 236, 0.3);
+
+  }
+  40% {
+    background-color:rgba(24, 24, 236, 0.4);
+
+  }
+  60% {
+    background-color:rgba(24, 24, 236, 0.5);
+
+
+  }
+  80% {
+    background-color:rgba(24, 24, 236, 0.6);
+
+  }
+  100% {
+    background-color:rgba(24, 24, 236, 0.7);
+
+  }
+}
+
+/* --- To animate the link in the block nav --- */
+a {
+  z-index:1; /* To put the link 'on' the canvas and make them 'click-able' */
+  text-decoration: none;
+  color:white;
+  font-family: 'Cute Font', cursive, 'Helvetica';
+  font-size:17px;
+  letter-spacing:2px;
+}
+
+
+
+/* -------------------------------- ANIMATION FOR ID IMAGE -------------------------------- */
+
+#container_text_id_image {
+  width:300px;
+  height:50px;
+  position:absolute;
+  top:155px;
+  left:-179px;
+  z-index:1;
+  background-color:rgb(24, 24, 236);
+  opacity:0.3;
+  border:1px solid white;
+  text-align:justify;
+
+}
+#text_id_image {
+  padding:5px;
+  margin:4px;
+  color:white;
+  opacity:0;
+  z-index:1;
+  font-family: 'Cute Font', cursive, 'Helvetica';
+  font-size:24px;
+}
+
+#text_id_image_visible {
+  margin-top:2px;
+  position:relative;
+  right:-205px;
+  top:1px;
+  color:white;
+  font-size:24px;
+  font-family: 'Cute Font', cursive, 'Helvetica';
+  z-index:2;
+}
+
+
+#image_container {
+  width:110px;
+  height:130px;
+  position:absolute;
+  top:15px;
+  left:10px;
+  border:1px solid white;
+  overflow:hidden;
+}
+
+#id_ben {
+  position:absolute;
+  top:-40px;
+  left:-46px;
+  width:205px;
+  height:270px;
+  animation:animation_id_picture 10s linear infinite;
+  -webkit-animation:animation_id_picture 10s linear infinite;
+}
+
+@keyframes animation_id_picture {
+  0% {
+    opacity:0.2;
+  }
+  10% {
+    opacity:0.3;
+  }
+  20% {
+    opacity:0.4;
+  }
+  30% {
+    opacity:0.5;
+  }
+  40% {
+    opacity:0.6;
+  }
+  50% {
+    opacity:0.5;
+  }
+  60% {
+    opacity:0.4;
+  }
+  70% {
+    opacity:0.3;
+  }
+  80% {
+    opacity:0.2;
+  }
+  90% {
+    opacity:0.1;
+  }
+  100% {
+    opacity:0.1;
+  }
+}
+
+@-webkit-keyframes animation_id_picture {
+  0% {
+    opacity:0.2;
+  }
+  10% {
+    opacity:0.1;
+  }
+  20% {
+    opacity:0.3;
+  }
+  30% {
+    opacity:0.2;
+  }
+  40% {
+    opacity:0.1;
+  }
+  50% {
+    opacity:0.2;
+  }
+  60% {
+    opacity:0.3;
+  }
+  70% {
+    opacity:0.2;
+  }
+  80% {
+    opacity:0.1;
+  }
+  90% {
+    opacity:0.2;
+  }
+  100% {
+    opacity:0.3;
+  }
+}
+
+
+/* -------------------------------- PARTICLES -------------------------------- */
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color:black;
+  background-image: url(""); /* To add a background */
+  background-repeat: no-repeat;
+  background-size: 300px 400px;
+  background-position: 10% 10%;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
